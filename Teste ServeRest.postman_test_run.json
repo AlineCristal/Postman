@@ -1,0 +1,155 @@
+{
+	"id": "6cf1718c-ca3d-4423-93b0-ba4adcf848ab",
+	"name": "Teste ServeRest",
+	"timestamp": "2023-06-30T17:07:41.316Z",
+	"collection_id": "28142042-16d2621b-dbed-4855-bb1d-ba6fc7f3aa76",
+	"folder_id": "28142042-5a90efdf-24ae-4357-8ad5-2aad8715cdac",
+	"environment_id": "0",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-30T17:07:40.577Z",
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "e6e60d5a-4784-4b3e-9e73-f8528228f237",
+			"name": "Listar Usuários",
+			"url": "http://localhost:3000/usuarios/",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Validar usuario": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Validar usuario": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Validar usuario": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "8374ef48-b412-441e-9271-bc9b0519779e",
+			"name": "Cadastrar Usuário",
+			"url": "http://localhost:3000/usuarios/",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Validar mensagem de sucesso": false,
+				"Status code is 201": false
+			},
+			"testPassFailCounts": {
+				"Validar mensagem de sucesso": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Validar mensagem de sucesso": false,
+					"Status code is 201": false
+				}
+			]
+		},
+		{
+			"id": "8b6b218e-e4d5-4c09-ad76-09c4bc0950fc",
+			"name": "Deletar Usuário",
+			"url": "http://localhost:3000/usuarios/jrRHIoo6AuQqY1lu",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Validar mensagem": false
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar mensagem": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Validar mensagem": false
+				}
+			]
+		},
+		{
+			"id": "93144450-055b-4b8b-b18b-84cdd235b833",
+			"name": "Editar Usuario",
+			"url": "http://localhost:3000/usuario/km39JfzwhE2kIenU",
+			"time": 4,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 22,
+	"collection": {
+		"requests": [
+			{
+				"id": "e6e60d5a-4784-4b3e-9e73-f8528228f237",
+				"method": "GET"
+			},
+			{
+				"id": "8374ef48-b412-441e-9271-bc9b0519779e",
+				"method": "POST"
+			},
+			{
+				"id": "8b6b218e-e4d5-4c09-ad76-09c4bc0950fc",
+				"method": "DELETE"
+			},
+			{
+				"id": "93144450-055b-4b8b-b18b-84cdd235b833",
+				"method": "PUT"
+			}
+		]
+	}
+}
